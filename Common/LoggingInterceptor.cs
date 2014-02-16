@@ -3,12 +3,11 @@ using Ninject.Extensions.Interception;
 
 namespace Common
 {
-    public class LoggingInterceptor :IInterceptor 
+    public class LoggingInterceptor : IInterceptor
     {
         public void Intercept(IInvocation invocation)
         {
             ILogger log = LogManager.GetLogger(invocation.Request.Method.DeclaringType);
-
             string methodName = invocation.Request.Method.Name;
 
             try

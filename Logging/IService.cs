@@ -23,7 +23,6 @@ namespace Logging
         public Person GetByAddresses(int id, Address address)
         {
             Person person = _people.First(p => p.Id == id);
-
             return person;
         }
     }

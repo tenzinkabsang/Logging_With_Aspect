@@ -9,7 +9,7 @@ namespace Logging
         public string LastName { get; set; }
         public int Age { get; set; }
         public string Xml { get; set; }
-        public List<Address> Addresses { get; set; }
+        public IEnumerable<Address> Addresses { get; set; }
     }
 
     public class Address

@@ -12,6 +12,7 @@ namespace Logging
         static void Main(string[] args)
         {
             RegisterUnHandledExceptions(log);
+
             log.Info("Start program...");
             IKernel kernel = new StandardKernel(new Startup());
 
@@ -20,8 +21,8 @@ namespace Logging
             Person p = new Person
             {
                 Id = 9009,
-                FirstName = "Tenzin",
-                LastName = "Kabzang",
+                FirstName = "Mike",
+                LastName = "Tyson",
                 Age = 21,
                 Xml = BuildXml()
             };
@@ -29,20 +30,20 @@ namespace Logging
             var address1 = new Address
             {
                 Id = 1111,
-                Address1 = "1234 Bangerter way",
-                City = "West Valley",
-                State = "UT",
-                Zip = "84115",
+                Address1 = "1234 Jabber way",
+                City = "San Francisco",
+                State = "CA",
+                Zip = "94115",
                 Country = "US"
             };
 
             var address2 = new Address
             {
                 Id = 2222,
-                Address1 = "Martin Luther Road",
-                City = "Provo",
-                State = "UT",
-                Zip = "84115",
+                Address1 = "Beckand Road",
+                City = "Oakland",
+                State = "CA",
+                Zip = "99115",
                 Country = "US"
             };
 
@@ -56,7 +57,7 @@ namespace Logging
 
         private static string BuildXml()
         {
-            const string xml = "<Xml><Id>222</Id><FirstName>Tenzin</FirstName><LastName>Kabsang</LastName></Xml>";
+            const string xml = "<Xml><Id>222</Id><FirstName>Mike</FirstName><LastName>Tyson</LastName></Xml>";
             XDocument xDoc = XDocument.Parse(xml);
             string result = xDoc.ToString(SaveOptions.DisableFormatting);
             return result;
